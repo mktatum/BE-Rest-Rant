@@ -17,5 +17,5 @@
 | Get    | \*                       | 404 page (matches any route not defined above)   |
 
 Restaurant Data
-| Name | City | State | Cuisines | Photo |
-| ---- | ---- | ----- | -------- | ----- |
+| Name | City | State | Cuisines | Photo (URL) |
+| ---- | ---- | ----- | -------- | ----------- |
