@@ -15,3 +15,7 @@
 | Post   | /places/:id/rant         | Create a rant (comment) about a particular place |
 | Delete | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
 | Get    | \*                       | 404 page (matches any route not defined above)   |
+
+Restaurant Data
+| Name | City | State | Cuisines | Photo |
+| ---- | ---- | ----- | -------- | ----- |
