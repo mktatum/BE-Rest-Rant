@@ -13,6 +13,17 @@ function home () {
                     </div>
                 </div>
                 <a className="btn btn-primary" href="/places">Places Page</a>
+
+{/* Footer Bonus */}
+                <div class="content">
+                <div class="content-inside">
+                </div>
+                </div>
+                <footer class="footer">
+                    <p>Click <a href="https://www.linkedin.com/in/melanie-tatum/">HERE</a> to visit Melanie on LinkedIn</p>
+                </footer>
+{/* End Footer Bonus */}
+
             </main>
         </Def>
     )      
