@@ -9,7 +9,26 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css" />
             </head>
             <body>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/places">Places</a>
+                        </li>
+                        <li>
+                            <a href="/places/new">Add Place</a>
+                        </li>
+                    </ul>
+                </nav>
                 {html.children}
+{/* Footer Bonus */}
+                <footer class="footer">
+                    <p>Click <a href="https://www.linkedin.com/in/melanie-tatum/">HERE</a> to visit Melanie on LinkedIn</p>
+                </footer>
+{/* End Footer Bonus */}
+
             </body>
         </html>
     )      
