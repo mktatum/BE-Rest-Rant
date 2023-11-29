@@ -10,6 +10,15 @@ router.get("/new", (req, res) => {
     res.render("places/new")
 })
 
+router.get("/:id", (req, res) => {
+    let ids = req.params.id
+    if (places[ids] === undefined) {
+        res.render('error404')
+    } else {
+        res.render('places/show', { place:places[ids] })
+    }
+})
+
 router.post('/', (req, res) => {
     console.log(req.body)
     if (!req.body.pic) {
