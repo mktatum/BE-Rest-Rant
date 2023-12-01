@@ -2,7 +2,8 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
-    console.log(data)
+    // data={ place:places[ids], ids}
+    // console.log(data)
     return (
         <Def>
             <main>
@@ -22,10 +23,15 @@ function show (data) {
                     <h2>Comments</h2>
                     <p>No comments yet!</p>
                 </div>
+
+                <a href="" className="btn btn-warning">Edit</a>  
+                <form method="POST" action={`/places/${data.ids}?_method=DELETE`} ids> 
+                    <button type="submit" className="btn btn-danger">Delete</button>
+                </form>     
+
             </main>
         </Def>
     )
 }
 
-// See activity 5-part-6 Part 3 line item 4)
 module.exports = show
