@@ -3,8 +3,10 @@ body {
     text-align: center;
 }
 main {
+    min-height: 100vh;
     margin-right: 20px;
     margin-left: 20px;
+    padding-bottom: 70px;
 }
 
 /* Sticky Footer */
@@ -15,7 +17,7 @@ main {
     background-color: darkblue;
     color: white;
     text-align: center;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     left: 0;
 }

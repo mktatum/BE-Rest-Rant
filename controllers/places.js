@@ -11,6 +11,17 @@ router.get("/new", (req, res) => {
     res.render("places/new")
 })
 
+
+// Edit route
+router.get("/:id/edit", (req, res) => {
+    let ids = req.params.id
+    if (places[ids] === undefined) {
+        res.render('error404')
+    } else {
+        res.render('places/edit', { place:places[ids], ids})
+    }
+})
+
 // Show route
 router.get("/:id", (req, res) => {
     let ids = req.params.id
