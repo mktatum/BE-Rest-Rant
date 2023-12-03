@@ -24,7 +24,7 @@ function Def (html) {
                 </nav>
                 {html.children}
 {/* Footer Bonus */}
-                <footer class="footer">
+                <footer className="footer">
                     <p>Click <a href="https://www.linkedin.com/in/melanie-tatum/">HERE</a> to visit Melanie on LinkedIn</p>
                 </footer>
 {/* End Footer Bonus */}

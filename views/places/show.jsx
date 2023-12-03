@@ -25,7 +25,7 @@ function show (data) {
                 </div>
 
                 <a href={`/places/${data.ids}/edit`} className="btn btn-warning">Edit</a>  
-                <form method="POST" action={`/places/${data.ids}?_method=DELETE`} ids> 
+                <form method="POST" action={`/places/${data.ids}?_method=DELETE`}> 
                     <button type="submit" className="btn btn-danger">Delete</button>
                 </form>     
 
