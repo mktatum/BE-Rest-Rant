@@ -9,7 +9,7 @@ function newForm(){
             <form method="POST" action="/places">
                 <div className="form-group">
                     <label htmlFor="name" className="form-label">Restaurant Name:</label>
-                    <input className="form-control" type="text" id="name" name="name"/>
+                    <input className="form-control" type="text" id="name" name="name" required/>
                 </div>
 
                 <div className="form-group">
@@ -19,7 +19,7 @@ function newForm(){
 
                 <div className="form-group">
                     <label htmlFor="cuisines" className="form-label">What's on the Menu:</label>
-                    <input className="form-control" type="text" id="cuisines" name="cuisines"/>
+                    <input className="form-control" type="text" id="cuisines" name="cuisines" required/>
                 </div>
 
                 <div className="form-group">
