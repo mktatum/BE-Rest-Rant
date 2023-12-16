@@ -42,7 +42,7 @@ router.put('/:id', async(req, res) => {
         }
 
         // Save the new data into places[id]
-        await Place.findByIdAndUpdate(id, req.body)
+        await Place.findByIdAndUpdate(id, req.body, {runValidators: true})
         // Place[id] = req.body
         res.redirect(`/places/${id}`)
     } catch(e) {

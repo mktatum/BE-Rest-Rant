@@ -12,8 +12,15 @@ function editForm(data){
                         <label htmlFor="name" className="form-label">Restaurant Name:</label>
                         <input className="form-control" type="text" id="name" name="name" defaultValue={data.place.name}/>
                     </div>
-                
+
                     <div className="form-group col-sm-6">
+                        <label htmlFor="founded" className="form-label">Year Founded:</label>
+                        <input className="form-control" type="number" id="founded" name="founded" defaultValue={data.place.founded}/>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="form-group col-sm-12">
                         <label htmlFor="pic" className="form-label">Site Photo:</label>
                         <input className="form-control" type="url" id="pic" name="pic" defaultValue={data.place.pic}/>
                     </div>
@@ -31,12 +38,12 @@ function editForm(data){
                     </div>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group col-sm-12">
                     <label htmlFor="cuisines" className="form-label">What's on the Menu:</label>
                     <input className="form-control" type="text" id="cuisines" name="cuisines" defaultValue={data.place.cuisines}/>
                 </div>
 
-                <button className="btn btn-primary">Add Place</button>
+                <button className="btn btn-primary">Submit Changes</button>
             </form>
             </main>
         </Def>

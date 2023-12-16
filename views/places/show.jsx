@@ -8,7 +8,10 @@ function show (data) {
         <Def>
             <main>
                 <div className="showpage">
-                    <img className="showimg" src= {data.place.pic } />
+                    <div className="photoDiv">
+                        <img className="showimg" src={data.place.pic } />
+                        <p>Located in {data.place.city }, {data.place.state } and serving {data.place.cuisines }</p>
+                    </div>
                     <div className="showdata">
                         <h1>{data.place.name }</h1>
                         <br/>
@@ -16,7 +19,8 @@ function show (data) {
                         <p>Not yet rated</p>
                         <br/>
                         <h2>Description</h2>
-                        <p>Located in {data.place.city }, {data.place.state } and serving {data.place.cuisines }</p>
+                        <p>{ data.place.showEstablished() }</p>
+                        <p>Serving { data.place.cuisines }</p>
                     </div>
                 </div>
                 <div className="comments">
