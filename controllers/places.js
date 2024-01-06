@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Place } = require("../models") 
+const { Place, Comment } = require("../models") 
 const { findByIdAndUpdate } = require('../models/places')
 // places.js
 
@@ -22,6 +22,27 @@ router.get("/:id/edit", async(req, res) => {
         const showPlace = await Place.findById(ids)
         res.render('places/edit', { place:showPlace})
     } catch {
+        res.render('error404')
+    }
+})
+
+// added PUT route for Submit comments button
+router.put('/:id/comments', async(req, res) => {
+    let id = req.params.id
+    // console.log(id, req.body)
+    try {
+
+        // Save the new data into places[id]
+        const restaurant = await Place.findById(id)
+        let comment = await Comment.create(req.body)
+        
+        restaurant.comments.push(comment.id)
+        await restaurant.save()
+
+        // Place[id] = req.body
+        res.redirect(`/places/${id}`)
+    } catch(e) {
+        console.log(e)
         res.render('error404')
     }
 })
@@ -56,9 +77,11 @@ router.get("/:id", async(req, res) => {
     let ids = req.params.id
     try {
         const showPlace = await Place.findById(ids)
+            .populate('comments')
+        // console.log(showPlace.comments)
         res.render('places/show', { place:showPlace })
     } catch(e) {
-        // console.log(e)
+        console.log(e)
         res.render('error404')
     }
 })
