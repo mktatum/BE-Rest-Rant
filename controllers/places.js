@@ -99,13 +99,13 @@ router.post('/', async(req, res) => {
 })
 
 router.delete('/:id', (req, res) => {
-    let ids = Number(req.params.id)
-    if (Place[ids] === undefined) {
+    let idOfTheOneImIn = req.params.id
+    Place.deleteOne({ _id: idOfTheOneImIn }).then(function(){
+        res.redirect('/places') // Success
+    }).catch(function(error){
         res.render('error404')
-    } else {
-        Place.splice(ids, 1)
-        res.redirect('/places')
-    }
+        console.log(error); // Failure
+    });
 })
 
 module.exports = router
