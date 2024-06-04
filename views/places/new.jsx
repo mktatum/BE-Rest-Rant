@@ -15,7 +15,7 @@ function newForm(){
 
                     <div className="form-group col-sm-6">
                         <label htmlFor="founded" className="form-label">Year Founded:</label>
-                        <input className="form-control" type="number" id="founded" name="founded"/>
+                        <input className="form-control" type="number" max={new Date().getFullYear()} id="founded" name="founded"/>
                     </div>
                 </div>
 
